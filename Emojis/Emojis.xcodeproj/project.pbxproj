@@ -11,6 +11,19 @@
 		DBE516F42730C2C50024C047 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE516F32730C2C50024C047 /* ContentView.swift */; };
 		DBE516F62730C2C70024C047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBE516F52730C2C70024C047 /* Assets.xcassets */; };
 		DBE516F92730C2C70024C047 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBE516F82730C2C70024C047 /* Preview Assets.xcassets */; };
+		DBF04C7827318B0C00C2CBDF /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF04C7727318B0C00C2CBDF /* ContentViewModel.swift */; };
+		DBF04C7D27318B4D00C2CBDF /* EmojiContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF04C7C27318B4D00C2CBDF /* EmojiContainerView.swift */; };
+		DBF04C8127318B6600C2CBDF /* AnyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF04C8027318B6600C2CBDF /* AnyShape.swift */; };
+		DBF04C8427318B8200C2CBDF /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF04C8327318B8200C2CBDF /* EmojiView.swift */; };
+		DBF04C8727318BA500C2CBDF /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF04C8627318BA500C2CBDF /* Emoji.swift */; };
+		DBF04C8D27318BDB00C2CBDF /* ShapeAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF04C8C27318BDB00C2CBDF /* ShapeAttribute.swift */; };
+		DBF04C9027318BF400C2CBDF /* ColorAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF04C8F27318BF400C2CBDF /* ColorAttribute.swift */; };
+		DBF04C9327318C0900C2CBDF /* ShadingAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF04C9227318C0900C2CBDF /* ShadingAttribute.swift */; };
+		DBF04C9627318C2700C2CBDF /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF04C9527318C2700C2CBDF /* Triangle.swift */; };
+		DBF04C9927318C2D00C2CBDF /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF04C9827318C2D00C2CBDF /* Diamond.swift */; };
+		DBF04C9D27318C6B00C2CBDF /* ShapeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF04C9C27318C6B00C2CBDF /* ShapeModifier.swift */; };
+		DBF04CA027318C8F00C2CBDF /* Shape+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF04C9F27318C8F00C2CBDF /* Shape+Extension.swift */; };
+		DBF04CA42731907500C2CBDF /* CenteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF04CA32731907500C2CBDF /* CenteredView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +33,19 @@
 		DBE516F52730C2C70024C047 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBE516F82730C2C70024C047 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBE516FA2730C2C70024C047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBF04C7727318B0C00C2CBDF /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		DBF04C7C27318B4D00C2CBDF /* EmojiContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiContainerView.swift; sourceTree = "<group>"; };
+		DBF04C8027318B6600C2CBDF /* AnyShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyShape.swift; sourceTree = "<group>"; };
+		DBF04C8327318B8200C2CBDF /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
+		DBF04C8627318BA500C2CBDF /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		DBF04C8C27318BDB00C2CBDF /* ShapeAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeAttribute.swift; sourceTree = "<group>"; };
+		DBF04C8F27318BF400C2CBDF /* ColorAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAttribute.swift; sourceTree = "<group>"; };
+		DBF04C9227318C0900C2CBDF /* ShadingAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadingAttribute.swift; sourceTree = "<group>"; };
+		DBF04C9527318C2700C2CBDF /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		DBF04C9827318C2D00C2CBDF /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
+		DBF04C9C27318C6B00C2CBDF /* ShapeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeModifier.swift; sourceTree = "<group>"; };
+		DBF04C9F27318C8F00C2CBDF /* Shape+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shape+Extension.swift"; sourceTree = "<group>"; };
+		DBF04CA32731907500C2CBDF /* CenteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +80,11 @@
 			children = (
 				DBE516F12730C2C50024C047 /* EmojisApp.swift */,
 				DBE516F32730C2C50024C047 /* ContentView.swift */,
+				DBF04C7727318B0C00C2CBDF /* ContentViewModel.swift */,
+				DBF04C8B27318BB100C2CBDF /* Models */,
+				DBF04C7F27318B5C00C2CBDF /* Shapes */,
+				DBF04C7B27318B3C00C2CBDF /* Views */,
+				DBF04C9B27318C6100C2CBDF /* ViewModifiers */,
 				DBE516F52730C2C70024C047 /* Assets.xcassets */,
 				DBE516FA2730C2C70024C047 /* Info.plist */,
 				DBE516F72730C2C70024C047 /* Preview Content */,
@@ -67,6 +98,46 @@
 				DBE516F82730C2C70024C047 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DBF04C7B27318B3C00C2CBDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBF04C8327318B8200C2CBDF /* EmojiView.swift */,
+				DBF04C7C27318B4D00C2CBDF /* EmojiContainerView.swift */,
+				DBF04CA32731907500C2CBDF /* CenteredView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DBF04C7F27318B5C00C2CBDF /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				DBF04C8027318B6600C2CBDF /* AnyShape.swift */,
+				DBF04C9527318C2700C2CBDF /* Triangle.swift */,
+				DBF04C9827318C2D00C2CBDF /* Diamond.swift */,
+				DBF04C9F27318C8F00C2CBDF /* Shape+Extension.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		DBF04C8B27318BB100C2CBDF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DBF04C8627318BA500C2CBDF /* Emoji.swift */,
+				DBF04C8C27318BDB00C2CBDF /* ShapeAttribute.swift */,
+				DBF04C8F27318BF400C2CBDF /* ColorAttribute.swift */,
+				DBF04C9227318C0900C2CBDF /* ShadingAttribute.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DBF04C9B27318C6100C2CBDF /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				DBF04C9C27318C6B00C2CBDF /* ShapeModifier.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +209,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF04C9927318C2D00C2CBDF /* Diamond.swift in Sources */,
+				DBF04C8127318B6600C2CBDF /* AnyShape.swift in Sources */,
 				DBE516F42730C2C50024C047 /* ContentView.swift in Sources */,
+				DBF04C7D27318B4D00C2CBDF /* EmojiContainerView.swift in Sources */,
+				DBF04C9327318C0900C2CBDF /* ShadingAttribute.swift in Sources */,
 				DBE516F22730C2C50024C047 /* EmojisApp.swift in Sources */,
+				DBF04C8D27318BDB00C2CBDF /* ShapeAttribute.swift in Sources */,
+				DBF04CA42731907500C2CBDF /* CenteredView.swift in Sources */,
+				DBF04CA027318C8F00C2CBDF /* Shape+Extension.swift in Sources */,
+				DBF04C9D27318C6B00C2CBDF /* ShapeModifier.swift in Sources */,
+				DBF04C9027318BF400C2CBDF /* ColorAttribute.swift in Sources */,
+				DBF04C9627318C2700C2CBDF /* Triangle.swift in Sources */,
+				DBF04C7827318B0C00C2CBDF /* ContentViewModel.swift in Sources */,
+				DBF04C8427318B8200C2CBDF /* EmojiView.swift in Sources */,
+				DBF04C8727318BA500C2CBDF /* Emoji.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
