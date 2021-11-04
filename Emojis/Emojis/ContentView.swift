@@ -38,58 +38,6 @@ struct Diamond_Previews: PreviewProvider {
     }
 }
 
-enum ShapeAttribute: Int {
-    case triangle0 = 0
-    case triangle90 = 1
-    case triangle180 = 2
-    case triangle270 = 3
-    case square = 4
-    case circle = 5
-    case diamond = 6
-    
-    var rotationDegrees: Double {
-        switch self {
-        case .triangle0: return 0
-        case .triangle90: return 90
-        case .triangle180: return 180
-        case .triangle270: return 270
-        case .square: return 0
-        case .circle: return 0
-        case .diamond: return 0
-        }
-    }
-}
-
-enum ColorAttribute: Int {
-    case red = 0
-    case blue = 1
-    case green = 2
-    case purple = 3
-    
-    var color: Color {
-        switch self {
-        case .red: return Color.red
-        case .blue: return Color.blue
-        case .green: return Color.green
-        case .purple: return Color.purple
-        }
-    }
-}
-
-enum ShadingAttribute: Int {
-    case none = 0
-    case translucent = 1
-    case opaque = 2
-    
-    var fillOpacity: CGFloat {
-        switch self {
-        case .none: return 0
-        case .translucent: return 0.2
-        case .opaque: return 1
-        }
-    }
-}
-
 struct Emoji: Identifiable {
     let id = UUID()
     let shapeAttribute: ShapeAttribute
@@ -115,8 +63,20 @@ struct EmojiView: View {
 }
 
 struct ContentViewModel {
-    var emojis: [Emoji] = []
+    var emojis: [Emoji] = [] {
+        didSet {
+            currentAngle = 0
+        }
+    }
+    var currentAngle: Double = 0
+    
     var balance: Int = 100
+
+    var balanceText: String? {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        return numberFormatter.string(from: NSNumber(value: balance))
+    }
     
     init() {
         setRandomEmojis()
@@ -209,33 +169,59 @@ extension Set {
     }
 }
 
+struct EmojiContainerView<Content: View>: View {
+    let content: Content
+    
+    init(@ViewBuilder content: () -> Content) {
+        self.content = content()
+    }
+    
+    var body: some View {
+        HStack { content }.padding()
+    }
+}
+
 struct ContentView: View {
     @State var viewModel: ContentViewModel = ContentViewModel()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            HStack {
+            EmojiContainerView(content: {
                 ForEach(viewModel.emojis, id: \.id) { emoji in
                     EmojiView(emoji: emoji)
+                        .rotationEffect(.degrees(viewModel.currentAngle))
+                        .animation(.easeIn, value: viewModel.currentAngle)
                 }
-            }.padding()
+            })
             Spacer()
             HStack(alignment: .center) {
                 Spacer()
-                Text(String(viewModel.balance))
+                Text(viewModel.balanceText ?? "")
                 Spacer()
             }
             Spacer()
             HStack(alignment: .center) {
                 Spacer()
                 Button(action: {
-                    viewModel.spin()
+                    viewModel.currentAngle = 360
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                        self.viewModel.spin()
+                    })
                 }, label: {
                     Text("Spin")
                 })
                 Spacer()
             }
             Spacer()
+            HStack(alignment: .center) {
+                Spacer()
+                Button(action: {
+                    viewModel = ContentViewModel()
+                }, label: {
+                    Text("New Game")
+                })
+                Spacer()
+            }
         }
     }
 }
@@ -243,16 +229,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-struct ShapeModifier: ViewModifier {
-    var degrees: Double
-    
-    func body(content: Content) -> some View {
-        content
-            .aspectRatio(1, contentMode: .fit)
-            .rotationEffect(.degrees(degrees))
     }
 }
 
